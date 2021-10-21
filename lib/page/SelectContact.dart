@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_third_lab/card/ButtonCard.dart';
+import 'package:flutter_third_lab/card/ContactCard.dart';
 import 'package:flutter_third_lab/model/ChatModel.dart';
 import 'package:flutter_third_lab/util/TestData.dart';
+import 'package:flutter_third_lab/page/CreateGroup.dart';
+
+import '../util/TestData.dart';
 
 class SelectContact extends StatefulWidget {
   SelectContact({Key? key}) : super(key: key);
@@ -75,7 +79,10 @@ class _SelectContactState extends State<SelectContact> {
             itemBuilder: (context, index) {
               if (index == 0) {
                 return InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (builder) => CreateGroup()));
+                  },
                   child: ButtonCard(
                     icon: Icons.group,
                     name: "New group",
@@ -87,7 +94,9 @@ class _SelectContactState extends State<SelectContact> {
                   name: "New contact",
                 );
               }
-              return Scaffold();
+              return ContactCard(
+                contact: TestData.contacts[index - 2],
+              );
             }));
   }
 }
