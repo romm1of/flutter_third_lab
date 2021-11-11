@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_third_lab/card/ButtonCard.dart';
-import 'package:flutter_third_lab/card/ContactCard.dart';
-import 'package:flutter_third_lab/globalStateManagement/StateUserValue.dart';
-import 'package:flutter_third_lab/model/ChatModel.dart';
-import 'package:flutter_third_lab/util/TestData.dart';
-import 'package:flutter_third_lab/page/CreateGroup.dart';
+import 'package:flutter_third_lab/card/button_card.dart';
+import 'package:flutter_third_lab/card/contact_card.dart';
+import 'package:flutter_third_lab/globalStateManagement/state_user_value.dart';
+import 'package:flutter_third_lab/util/test_data.dart';
+import 'package:flutter_third_lab/page/create_group.dart';
 import 'package:provider/provider.dart';
 
-import '../util/TestData.dart';
+import '../util/test_data.dart';
 
 class SelectContact extends StatefulWidget {
   SelectContact({Key? key}) : super(key: key);

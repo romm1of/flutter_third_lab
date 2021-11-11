@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_third_lab/card/ChatPageCard.dart';
-import 'package:flutter_third_lab/model/ChatModel.dart';
-import 'package:flutter_third_lab/page/SelectContact.dart';
+import 'package:flutter_third_lab/card/chat_page_card.dart';
+import 'package:flutter_third_lab/model/chat_model.dart';
+import 'package:flutter_third_lab/page/select_contact.dart';
 
 class ChatPage extends StatefulWidget {
   ChatPage({Key? key, required this.chatmodels}) : super(key: key);
