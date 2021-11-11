@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_third_lab/card/ButtonCard.dart';
 import 'package:flutter_third_lab/card/ContactCard.dart';
+import 'package:flutter_third_lab/globalStateManagement/StateUserValue.dart';
 import 'package:flutter_third_lab/model/ChatModel.dart';
 import 'package:flutter_third_lab/util/TestData.dart';
 import 'package:flutter_third_lab/page/CreateGroup.dart';
+import 'package:provider/provider.dart';
+
 
 import '../util/TestData.dart';
 
@@ -17,9 +20,11 @@ class SelectContact extends StatefulWidget {
 class _SelectContactState extends State<SelectContact> {
   @override
   Widget build(BuildContext context) {
+    var value=context.watch<StateUserValue>().isRead;
+
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFF075E54),
+          backgroundColor: value ? Color(0xFF075E54) : Color(0xFFF),
           title: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +50,9 @@ class _SelectContactState extends State<SelectContact> {
                   Icons.search,
                   size: 26,
                 ),
-                onPressed: () {}),
+                onPressed: () {
+                  context.read<StateUserValue>().changeRead(value);
+                }),
             PopupMenuButton<String>(
               padding: EdgeInsets.all(0),
               onSelected: (value) {
