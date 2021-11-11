@@ -13,6 +13,15 @@ class HomePage extends StatefulWidget {
 class _HomescreenState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController _controller;
+
+  bool _selected = true;
+
+  void _changeIcon() {
+    setState(() {
+      _selected = !_selected;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -26,7 +35,11 @@ class _HomescreenState extends State<HomePage>
         backgroundColor: Color(0xFF075E54),
         title: Text("Whatsapp"),
         actions: [
-          IconButton(icon: Icon(Icons.search), onPressed: () {}),
+          IconButton(
+              icon: Icon(_selected ? Icons.search : Icons.celebration),
+              onPressed: () {
+                _changeIcon();
+              }),
           PopupMenuButton<String>(
             onSelected: (value) {},
             itemBuilder: (BuildContext contesxt) {
