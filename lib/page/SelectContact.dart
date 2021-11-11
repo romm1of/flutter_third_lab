@@ -7,7 +7,6 @@ import 'package:flutter_third_lab/util/TestData.dart';
 import 'package:flutter_third_lab/page/CreateGroup.dart';
 import 'package:provider/provider.dart';
 
-
 import '../util/TestData.dart';
 
 class SelectContact extends StatefulWidget {
@@ -20,7 +19,15 @@ class SelectContact extends StatefulWidget {
 class _SelectContactState extends State<SelectContact> {
   @override
   Widget build(BuildContext context) {
-    var value=context.watch<StateUserValue>().isRead;
+    var value = context.watch<StateUserValue>().isRead;
+    int _itemCount = 0;
+
+    void _incrementValue() {
+      setState(() => {_itemCount++});
+      if (_itemCount == 11) {
+        _itemCount = 0;
+      }
+    }
 
     return Scaffold(
         appBar: AppBar(
@@ -37,7 +44,7 @@ class _SelectContactState extends State<SelectContact> {
                 ),
               ),
               Text(
-                "5 contacts",
+                "$_itemCount contacts",
                 style: TextStyle(
                   fontSize: 13,
                 ),
@@ -45,6 +52,11 @@ class _SelectContactState extends State<SelectContact> {
             ],
           ),
           actions: [
+            IconButton(
+                onPressed: () {
+                  _incrementValue();
+                },
+                icon: Icon(Icons.add_outlined)),
             IconButton(
                 icon: Icon(
                   Icons.search,
