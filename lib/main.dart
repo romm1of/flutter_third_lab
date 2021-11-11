@@ -1,8 +1,15 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_third_lab/page/HomePage.dart';
 
+import './globalStateManagement/StateUserValue.dart';
+
 Future<void> main() async {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_)=>StateUserValue())
+    ],child:MyApp())
+  );
 }
 
 class MyApp extends StatelessWidget {

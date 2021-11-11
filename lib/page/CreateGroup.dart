@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_third_lab/card/ContactCard.dart';
+import 'package:flutter_third_lab/globalStateManagement/StateUserValue.dart';
 import 'package:flutter_third_lab/model/ChatModel.dart';
 import 'package:flutter_third_lab/util/TestData.dart';
 
