@@ -16,10 +16,11 @@ class SelectContact extends StatefulWidget {
 }
 
 class _SelectContactState extends State<SelectContact> {
+  int _itemCount = 0;
+
   @override
   Widget build(BuildContext context) {
     var value = context.watch<StateUserValue>().isRead;
-    int _itemCount = 0;
 
     void _incrementValue() {
       setState(() => {_itemCount++});
