@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_third_lab/card/ContactCard.dart';
-import 'package:flutter_third_lab/globalStateManagement/StateUserValue.dart';
-import 'package:flutter_third_lab/model/ChatModel.dart';
-import 'package:flutter_third_lab/util/TestData.dart';
+import 'package:flutter_third_lab/card/contact_card.dart';
+import 'package:flutter_third_lab/globalStateManagement/state_user_value.dart';
+import 'package:flutter_third_lab/model/chat_model.dart';
+import 'package:flutter_third_lab/util/test_data.dart';
 
 class CreateGroup extends StatefulWidget {
   CreateGroup({Key? key}) : super(key: key);

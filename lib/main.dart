@@ -1,8 +1,8 @@
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_third_lab/page/HomePage.dart';
+import 'package:flutter_third_lab/page/home_page.dart';
 
-import './globalStateManagement/StateUserValue.dart';
+import './globalStateManagement/state_user_value.dart';
 
 Future<void> main() async {
   runApp(

@@ -1,4 +1,4 @@
-import 'package:flutter_third_lab/model/ChatModel.dart';
+import 'package:flutter_third_lab/model/chat_model.dart';
 
 class TestData {
   static const defaultProfilePicUrl = "assets/person.svg";

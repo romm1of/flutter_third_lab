@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_third_lab/model/ChatModel.dart';
-import 'package:flutter_third_lab/page/ChatPage.dart';
-import 'package:flutter_third_lab/util/TestData.dart';
+import 'package:flutter_third_lab/model/chat_model.dart';
+import 'package:flutter_third_lab/page/chat_page.dart';
+import 'package:flutter_third_lab/util/test_data.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_third_lab/model/ChatModel.dart';
+import 'package:flutter_third_lab/model/chat_model.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({Key? key, this.contact}) : super(key: key);
